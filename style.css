@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+img {
+    width: 20px;
+    height: 20px;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -13,8 +18,33 @@
 
 
 .sidebar {
-    background-color: aqua;
+    background-color: beige;
+
     grid-row: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 50px repeat(auto-fit, 30px);
+    align-items: center;
+}
+
+.sidebar > a {
+    text-decoration: none;
+    color: brown;
+}
+
+.dashboard {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dashboard.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon {
+    justify-self: center;
 }
 
 .article {
