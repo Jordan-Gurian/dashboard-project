@@ -1,14 +1,13 @@
 :root {
-    --background-gray: #D3D3D3;
+    --background-lavendar: #D9E4FC;
     --background-blue: #0096FF;
     --online-green: #32CD32;
     --top-page-padding: 10px;
     --webpage-fonts: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     --standard-gap: 10px;
     --article-padding: 10px;
-    --right-bar-padding: 8px;
     --article-header-height: 20px;
-    --gray-border-bottom: 1px solid var(--background-gray);
+    --gray-border-bottom: 1px solid var(--background-lavendar);
     --fancy-card-border: 6px solid var(--online-green);
     --fancy-card-border-radius: 8px;
 }
@@ -103,7 +102,7 @@ a {
     width: min(33vw, 500px);
     height: 20px;
     border-radius: 12px;
-    background-color:  var(--background-gray);
+    background-color:  var(--background-lavendar);
 }
 
 #search-bar:focus {
@@ -176,13 +175,13 @@ button {
 }
 
 .article {
-    background-color: var(--background-gray);
+    background-color: var(--background-lavendar);
     display: grid;
     grid-template-rows: var(--article-header-height) 1fr;
     grid-template-columns: 2fr 1fr;
     gap: var(--standard-gap);
     padding: var(--article-padding);
-    box-shadow: 0px -1px 2px 0px var(--background-gray);
+    box-shadow: 1px -1px 2px 0px black;
 }
 
 .projects {
@@ -235,7 +234,8 @@ button {
     grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
     gap: var(--standard-gap);
     background-color: white;
-    padding: var(--right-bar-padding);
+    padding: var(--article-padding);
+    border-radius: var(--fancy-card-border-radius);
 
 }
 
@@ -250,17 +250,19 @@ button {
 
 .trending {
     display: grid;
-    grid-template-rows: var(--article-header-height) repeat(auto-fit, minmax(50px, 1fr));
-    /* gap: var(--standard-gap); */
-    background-color: white;
+    grid-template-rows: var(--article-header-height) 1fr;
 }
 
-.trending-header {
-    background-color: var(--background-gray);
+
+.trending-users {
+    padding: var(--article-padding);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    background-color: white;
+    border-radius: var(--fancy-card-border-radius);
 }
 
 .trending-user {
-    padding: var(--right-bar-padding);
     display: flex;
     gap: var(--standard-gap);
     border-bottom: var(--gray-border-bottom);
